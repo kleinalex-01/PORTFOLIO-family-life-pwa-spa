@@ -1,23 +1,24 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import styles from './Layout.module.css';
-
+import { useAuth } from '../context/AuthContext';
 const Layout: React.FC = () => {
+    const { user } = useAuth();
+
     return (
         <>
-            <header>
+            { user && <header>
                 <nav>
                     <p>this is the header</p>
                 </nav>
-            </header>
+            </header>}
 
             <body>
                 <Outlet />
             </body>
 
-            <footer>
+            { user && <footer>
                 <p>this is the footer</p>
-            </footer>
+            </footer>}
         </>
     )
 }
