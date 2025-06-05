@@ -2,8 +2,6 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Navigate } from 'react-router-dom';
-import Footer from "./Footer";
-import Header from "./Header";
 
 const Layout: React.FC = () => {
     const { user, loading } = useAuth();
@@ -18,9 +16,7 @@ const Layout: React.FC = () => {
 
     return (
         <>
-            <Header />
             <Outlet />
-            <Footer />
         </>
     )
 }
