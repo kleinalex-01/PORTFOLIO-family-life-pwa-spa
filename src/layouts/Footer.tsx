@@ -1,9 +1,6 @@
-import { AuthErrorCodes } from "firebase/auth";
 
 const Footer = () => {
-    const date = new Date();
-    const time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
+    
     const quotes = [
         {
             text: "A víz a természet fuvarosa.",
