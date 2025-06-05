@@ -18,21 +18,27 @@ export const AuthProvider = ({ children }: { children: React.ReactNode}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             setUser(user);
-            setLoading(true);
+            setLoading(false);
         });
 
         return () => unsubscribe();
     },[]);
 
-    if (loading) return <div>Betöltés...</div>
+    if (loading) return (
+        <>
+
+        </>
+    )
 
     return (
-        <>{!user ? 
-        <Login /> : 
+        <>
         <AuthContext.Provider value={{ user, loading }}>
-            {children}
-        </AuthContext.Provider>}
-
+            {loading ? (
+                <div className="loading-ontainer container-fluid bg-dark text-light d-flex justify-content-center align-items-center vh-100">
+                    <h1>Betöltés...</h1>
+                </div>
+            ) : (children)} 
+        </AuthContext.Provider>
         </>
     )
 }

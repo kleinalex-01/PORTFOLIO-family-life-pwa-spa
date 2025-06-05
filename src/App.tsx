@@ -3,11 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Login from './pages/Log-in/Login'
 import LandingPage from './pages/Landing-page/LandingPage'
-import { AuthProvider } from './context/AuthContext'
 
 const App: React.FC = () => {
   return (
-    <AuthProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -22,7 +20,6 @@ const App: React.FC = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
   )
 }
 

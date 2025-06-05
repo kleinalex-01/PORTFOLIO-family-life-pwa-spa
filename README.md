@@ -17,6 +17,10 @@ Created with Vite.
 
 Project set up is complete. So far, the main Routing is done. Created and added .favicon files in 4 different sizes.
 
-# Log 2 (26.06.04)
+# Log 2 (25.06.04)
 
 Done set up routing with Layout and conditionally rendering a Log-in page whether the user is logged in or not. Layout only shows when user is logged in.
+
+# Log 3 (25.06.05)
+
+Came upon a majority of bugs regarding the conditional log-in page rendering. Refactored code, deleted doubling of BrowserRouter and AuthProvider. Re-wrote AuthProvider "children" logic. Now its back to working order.
