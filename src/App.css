@@ -2,4 +2,15 @@
     font-family: 'Roboto Condensed', 'Rubik Bubbles', sans-serif;
     line-height: 1.5;
     font-weight: 400;
+    --primary-color: #2c2c2e;
+    --secondary-color: #3a3a3c;
+    --accent-color: #4a90e2;
+    --text-color: #e5e5ea;
+    --muted-color: #636366;
+    --success-color: #34c759;
+    --warning-color: #ff3b30;
+}
+body {
+    color : var(--text-color);
+    background-color: var(--primary-color);
 }

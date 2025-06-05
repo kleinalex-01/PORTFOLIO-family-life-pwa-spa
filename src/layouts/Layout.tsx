@@ -18,11 +18,9 @@ const Layout: React.FC = () => {
 
     return (
         <>
-                <Header />
-
-                <Outlet />
-
-                <Footer />
+            <Header />
+            <Outlet />
+            <Footer />
         </>
     )
 }

@@ -1,0 +1,40 @@
+.tasks {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+}
+.tasksContainer {
+  position: relative;
+  margin-top: 3rem;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.column {
+  padding: 0 20px;
+  border-bottom: 2px solid #444; 
+}
+
+.name {
+  border-bottom: 3px solid #666;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.taskList {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 40px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
