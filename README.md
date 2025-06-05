@@ -24,3 +24,7 @@ Done set up routing with Layout and conditionally rendering a Log-in page whethe
 # Log 3 (25.06.05)
 
 Came upon a majority of bugs regarding the conditional log-in page rendering. Refactored code, deleted doubling of BrowserRouter and AuthProvider. Re-wrote AuthProvider "children" logic. Now its back to working order.
+
+# Log 4 (25.06.05)
+
+Header and Footer component made, now testing on mobile.
