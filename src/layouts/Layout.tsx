@@ -16,7 +16,7 @@ const Layout: React.FC = () => {
 
     return (
         <>
-            <Outlet />
+        <Outlet />
         </>
     )
 }

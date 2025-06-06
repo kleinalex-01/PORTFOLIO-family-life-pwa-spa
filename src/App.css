@@ -1,6 +1,8 @@
 * {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
     font-family: "Inter", sans-serif;
-    border-radius: 12px;
     line-height: 1.5;
     font-weight: 400;
     --color-bg: #f9f9f9;
@@ -10,6 +12,6 @@
     --color-border-divider: #e5e5ea;
     --color-btn: #3b82f6;
     --color-item-highlight: #2563eb;
-    --color-icons: #1c1c1ce;
-    --color-notification: #a1a1aa
+    --color-icons: #686a6e;
+    --color-notification: #a1a1aa;
 }
