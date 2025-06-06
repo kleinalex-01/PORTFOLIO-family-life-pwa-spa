@@ -1,4 +1,4 @@
-import styles from './LandingPage.module.css';
+import styles from './Landingpage.module.css';
 
 
 const Dashboard = () => {
@@ -35,7 +35,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      
+
     </div>
     </>
   );
