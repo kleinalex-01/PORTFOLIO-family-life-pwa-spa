@@ -1,4 +1,4 @@
-import styles from './Landingpage.module.css';
+import styles from './LandingPage.module.css';
 
 
 const Dashboard = () => {
