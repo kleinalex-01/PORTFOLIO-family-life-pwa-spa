@@ -14,7 +14,6 @@ const App: React.FC = () => {
                 element={<Layout />}
           >
             <Route index element={<Dashboard />} />
-
             {/* Ide jön a többi oldal */}
 
           </Route>

@@ -28,3 +28,7 @@ Came upon a majority of bugs regarding the conditional log-in page rendering. Re
 # Log 4 (25.06.05)
 
 Header and Footer component made, now testing on mobile.
+
+# Log 5 (25.06.10)
+
+New UI component to keep track of daily tasks. Pulled in database from firebase and re-made functions to display and modify data on the DB.
