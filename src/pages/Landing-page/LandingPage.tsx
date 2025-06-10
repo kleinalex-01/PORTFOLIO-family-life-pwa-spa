@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import styles from './LandingPage.module.css';
 import { Link } from 'react-router-dom';
 import { taskRef } from '../../FirebaseConfig';
-import { ref, set, push, onValue } from 'firebase/database';
+import { set, push, onValue } from 'firebase/database';
 
+interface TaskData {
+  task: string;
+}
 
 const Dashboard = () => {
   const [DbTask, setDbTask] = useState<string[]>([]);
@@ -16,7 +19,7 @@ const Dashboard = () => {
         setDbTask([]);
         return;
       }
-      const tasks: string[] = Object.entries(data).map(([_, value]: [string, any]) => {
+      const tasks: string[] = Object.entries(data as Record<string, TaskData>).map(([, value]) => {
         return value.task;
       });
       setDbTask(tasks);
@@ -28,7 +31,9 @@ const Dashboard = () => {
     e.preventDefault();
     if (newTask.trim() === "") return;
     const newTaskRef = push(taskRef);
+    const id = newTaskRef.key;
     set(newTaskRef, {
+      id: id,
       task: newTask
     }).then(() => {
       setNewTask("");
