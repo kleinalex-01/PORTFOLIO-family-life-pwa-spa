@@ -29,4 +29,18 @@ body {
 }
 .button {
   color: var(--color-item-highlight);
+  background-color: var(--color-primary-bg);
+}
+.taskName {
+  position: relative;
+  top: 7px;
+}
+.buttons {
+  color: var(--color-primary-text);
+  font-size: 0.75rem;
+}
+.completedBtn {
+  color: var(--color-icons);
+  border: none;
+  background-color: transparent;
 }

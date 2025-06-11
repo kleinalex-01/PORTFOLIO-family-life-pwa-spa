@@ -32,3 +32,7 @@ Header and Footer component made, now testing on mobile.
 # Log 5 (25.06.10)
 
 New UI component to keep track of daily tasks. Pulled in database from firebase and re-made functions to display and modify data on the DB.
+
+# Log 5 (25.06.11)
+
+Fully functional "To-do" component. You can modify, delete and mark tasks as completed. They all write on server data, so others can see it as well in the family. Going forward, im thinking of refactoring and putting each functionality in it's own component, so the code becomes less crowded and more reusable.
