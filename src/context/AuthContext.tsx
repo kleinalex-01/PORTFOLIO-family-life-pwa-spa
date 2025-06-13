@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode}) => {
         <>
         <AuthContext.Provider value={{ user, loading }}>
             {loading ? (
-                <div className="loading-ontainer container-fluid bg-dark text-light d-flex justify-content-center align-items-center vh-100">
+                <div className="container-fluid bg-dark text-light d-flex justify-content-center align-items-center vh-100">
                     <h1>Betöltés...</h1>
                 </div>
             ) : (children)} 

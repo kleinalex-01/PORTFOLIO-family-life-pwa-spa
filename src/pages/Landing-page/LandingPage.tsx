@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from './LandingPage.module.css';
-import { Link } from 'react-router-dom';
 import { taskRef } from '../../FirebaseConfig';
 import { set, push, onValue, update, child, remove } from 'firebase/database';
+import { Calendar } from '../../components/Calendar';
+import { CalendarTaskList } from '../../components/CalendarTaskList';
 
 interface TaskData {
   id: string;
@@ -86,6 +87,7 @@ const Dashboard = () => {
 
   return (
     <>
+    <CalendarTaskList/>
     <div className={`container vh-100`}>
       {/* Header */}
       <div className={`${styles.header} d-flex justify-content-between align-items-center`}>
@@ -95,18 +97,14 @@ const Dashboard = () => {
       {/* Közelső események + naptár kártya */}
       <div className={`container-fluid`}>
         <div className='d-flex align-items-center'>
-          <Link to="/calendar"><i className={`${styles.calendarIcon} fa-regular fa-calendar`}></i></Link>
+          <i className={`${styles.calendarIcon} fa-regular fa-calendar`}></i>
           <h2 className='mx-2'>Közelgő Események</h2>
         </div>
         <div className='card my-3'>
           <h2 className={`card-title mx-2 my-1`}>{formattedDate(new Date())}</h2>
           <div className='card-body'>
-            <p className='card-text'>Nincs esemény a mai napra.</p>
+            <Calendar/>
           </div>
-        </div>
-        {/* Teljes naptár megtekintése */}
-        <div className='d-flex justify-content-end align-items-center'>
-          <Link to="/calendar" className={styles.calendarLink}>Naptár megnyitása</Link>
         </div>
       </div>
       {/* Teendő lista kártya */}
@@ -115,6 +113,7 @@ const Dashboard = () => {
           <i className={`fa-solid fa-list-check ${styles.checklistIcon}`}></i>
           <h2 className='mx-2'>Teendők</h2>
         </div>
+      {/* Teendők listázása */}
         <div className='card my-3'>
           <div className='card-body'>
             {DbTask.length <= 0 ? <p className='card-text'>Nincs esemény a mai napra.</p>

@@ -19,5 +19,6 @@ const analytics = getAnalytics(firebaseApp);
 const auth = getAuth(firebaseApp);
 const database = getDatabase(firebaseApp);
 const taskRef = ref(database, 'tasks');
+const calendarRef = ref(database, 'events')
 
-export {firebaseApp, analytics, auth, taskRef}
+export {firebaseApp, analytics, auth, taskRef, calendarRef}

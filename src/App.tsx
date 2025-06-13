@@ -1,10 +1,12 @@
 import './App.css'
+import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Login from './pages/Log-in/Login'
 import Dashboard from './pages/Landing-page/LandingPage'
 
 const App: React.FC = () => {
+
   return (
       <BrowserRouter>
         <Routes>
@@ -13,7 +15,7 @@ const App: React.FC = () => {
           <Route path="/*" 
                 element={<Layout />}
           >
-            <Route index element={<Dashboard />} />
+            <Route index element={<Dashboard/>} />
             {/* Ide jön a többi oldal */}
 
           </Route>

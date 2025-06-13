@@ -15,3 +15,21 @@
     --color-icons: #686a6e;
     --color-notification: #a1a1aa;
 }
+/* Naptár sítlusai */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-cell {
+  min-height: 80px;
+  border: 1px solid var(--color-border-divider);
+  text-align: center;
+  background-color: var(--color-bg);
+}
+
+.calendar-header {
+  background-color: #ffffff;
+  border: none;;
+}

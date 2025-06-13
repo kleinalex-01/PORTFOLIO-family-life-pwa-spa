@@ -36,3 +36,7 @@ New UI component to keep track of daily tasks. Pulled in database from firebase 
 # Log 5 (25.06.11)
 
 Fully functional "To-do" component. You can modify, delete and mark tasks as completed. They all write on server data, so others can see it as well in the family. Going forward, im thinking of refactoring and putting each functionality in it's own component, so the code becomes less crowded and more reusable.
+
+# Log 6 (25.06.13)
+
+Refactored a lot of code for better readability and reusability. Code is still a mess sadly. Created context for calendar to avoid prop drilling.
